@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://servicios.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="WS" targetNamespace="http://servicios.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/EventSoftWebServices/WS?xsd=1" namespace="http://servicios.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarEvento">
+    <part name="parameters" element="tns:insertarEvento" />
+  </message>
+  <message name="insertarEventoResponse">
+    <part name="parameters" element="tns:insertarEventoResponse" />
+  </message>
+  <message name="listarEspecialidadesTodas">
+    <part name="parameters" element="tns:listarEspecialidadesTodas" />
+  </message>
+  <message name="listarEspecialidadesTodasResponse">
+    <part name="parameters" element="tns:listarEspecialidadesTodasResponse" />
+  </message>
+  <message name="listarDocentesPorCodigoPUCPNombreIdEspecialidad">
+    <part name="parameters" element="tns:listarDocentesPorCodigoPUCPNombreIdEspecialidad" />
+  </message>
+  <message name="listarDocentesPorCodigoPUCPNombreIdEspecialidadResponse">
+    <part name="parameters" element="tns:listarDocentesPorCodigoPUCPNombreIdEspecialidadResponse" />
+  </message>
+  <message name="listarEventosPorNombre">
+    <part name="parameters" element="tns:listarEventosPorNombre" />
+  </message>
+  <message name="listarEventosPorNombreResponse">
+    <part name="parameters" element="tns:listarEventosPorNombreResponse" />
+  </message>
+  <message name="listarDocentePorIdEvento">
+    <part name="parameters" element="tns:listarDocentePorIdEvento" />
+  </message>
+  <message name="listarDocentePorIdEventoResponse">
+    <part name="parameters" element="tns:listarDocentePorIdEventoResponse" />
+  </message>
+  <message name="listarActividadesPorIdEvento">
+    <part name="parameters" element="tns:listarActividadesPorIdEvento" />
+  </message>
+  <message name="listarActividadesPorIdEventoResponse">
+    <part name="parameters" element="tns:listarActividadesPorIdEventoResponse" />
+  </message>
+  <portType name="WS">
+    <operation name="insertarEvento">
+      <input wsam:Action="http://servicios.pucp.edu.pe/WS/insertarEventoRequest" message="tns:insertarEvento" />
+      <output wsam:Action="http://servicios.pucp.edu.pe/WS/insertarEventoResponse" message="tns:insertarEventoResponse" />
+    </operation>
+    <operation name="listarEspecialidadesTodas">
+      <input wsam:Action="http://servicios.pucp.edu.pe/WS/listarEspecialidadesTodasRequest" message="tns:listarEspecialidadesTodas" />
+      <output wsam:Action="http://servicios.pucp.edu.pe/WS/listarEspecialidadesTodasResponse" message="tns:listarEspecialidadesTodasResponse" />
+    </operation>
+    <operation name="listarDocentesPorCodigoPUCPNombreIdEspecialidad">
+      <input wsam:Action="http://servicios.pucp.edu.pe/WS/listarDocentesPorCodigoPUCPNombreIdEspecialidadRequest" message="tns:listarDocentesPorCodigoPUCPNombreIdEspecialidad" />
+      <output wsam:Action="http://servicios.pucp.edu.pe/WS/listarDocentesPorCodigoPUCPNombreIdEspecialidadResponse" message="tns:listarDocentesPorCodigoPUCPNombreIdEspecialidadResponse" />
+    </operation>
+    <operation name="listarEventosPorNombre">
+      <input wsam:Action="http://servicios.pucp.edu.pe/WS/listarEventosPorNombreRequest" message="tns:listarEventosPorNombre" />
+      <output wsam:Action="http://servicios.pucp.edu.pe/WS/listarEventosPorNombreResponse" message="tns:listarEventosPorNombreResponse" />
+    </operation>
+    <operation name="listarDocentePorIdEvento">
+      <input wsam:Action="http://servicios.pucp.edu.pe/WS/listarDocentePorIdEventoRequest" message="tns:listarDocentePorIdEvento" />
+      <output wsam:Action="http://servicios.pucp.edu.pe/WS/listarDocentePorIdEventoResponse" message="tns:listarDocentePorIdEventoResponse" />
+    </operation>
+    <operation name="listarActividadesPorIdEvento">
+      <input wsam:Action="http://servicios.pucp.edu.pe/WS/listarActividadesPorIdEventoRequest" message="tns:listarActividadesPorIdEvento" />
+      <output wsam:Action="http://servicios.pucp.edu.pe/WS/listarActividadesPorIdEventoResponse" message="tns:listarActividadesPorIdEventoResponse" />
+    </operation>
+  </portType>
+  <binding name="WSPortBinding" type="tns:WS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEspecialidadesTodas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDocentesPorCodigoPUCPNombreIdEspecialidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEventosPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDocentePorIdEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarActividadesPorIdEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS">
+    <port name="WSPort" binding="tns:WSPortBinding">
+      <soap:address location="http://localhost:8080/EventSoftWebServices/WS" />
+    </port>
+  </service>
+</definitions>
